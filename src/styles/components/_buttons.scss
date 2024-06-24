@@ -1,0 +1,25 @@
+@use '../variables';
+
+.button {
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    white-space: nowrap; //forçar o texto a ocupar toda uma linha para que ele n quebre, nowrap para dizer ao elemento se ele deve ou não quebrar a linha.
+
+    &--primary {
+        color: #fff;
+        background-color: variables.$purple;
+    }
+
+    @media(max-width: 640px) {
+        display: flex;
+        width: 100%;
+    }
+
+    @media (max-width: 1024px) {
+        display: flex;
+        align-items: center;
+    }
+}
